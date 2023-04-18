@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="corporate.hard.robots.WalletAPI.Model.WalletItemTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-04-16T23:16:50" hostname="Rafaels-MacBook-Pro.local" time="0.011">
+  <properties/>
+  <testcase name="Test Wallet Item equals()" classname="corporate.hard.robots.WalletAPI.Model.WalletItemTest" time="0.001"/>
+  <testcase name="Test Wallet Item toString()" classname="corporate.hard.robots.WalletAPI.Model.WalletItemTest" time="0.001"/>
+  <testcase name="testStock()" classname="corporate.hard.robots.WalletAPI.Model.WalletItemTest" time="0.001"/>
+  <testcase name="testId()" classname="corporate.hard.robots.WalletAPI.Model.WalletItemTest" time="0.0"/>
+  <testcase name="Test Wallet constructor()" classname="corporate.hard.robots.WalletAPI.Model.WalletItemTest" time="0.002"/>
+  <testcase name="Test Wallet Item hashCode()" classname="corporate.hard.robots.WalletAPI.Model.WalletItemTest" time="0.001"/>
+  <testcase name="testWalletId()" classname="corporate.hard.robots.WalletAPI.Model.WalletItemTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

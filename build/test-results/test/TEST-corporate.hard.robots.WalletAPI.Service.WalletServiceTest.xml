@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="corporate.hard.robots.WalletAPI.Service.WalletServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-04-16T23:16:50" hostname="Rafaels-MacBook-Pro.local" time="0.013">
+  <properties/>
+  <testcase name="post should post wallet()" classname="corporate.hard.robots.WalletAPI.Service.WalletServiceTest" time="0.004"/>
+  <testcase name="getById should return wallet with given id()" classname="corporate.hard.robots.WalletAPI.Service.WalletServiceTest" time="0.003"/>
+  <testcase name="getAll should return list of wallets()" classname="corporate.hard.robots.WalletAPI.Service.WalletServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
