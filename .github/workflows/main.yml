@@ -3,15 +3,20 @@ name: Run Kotlin script
 on:
   workflow_dispatch:
     inputs:
-      awesome-input:
-        description: 'Awesome parameter'
+      build:
+        description: 'Build project'
         default: 'You'
         required: true
 
 jobs:
-  awesome-action:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Run Kotlin script
-      run: kotlinc -script ./common.main.kts ${{ github.event.inputs.awesome-input }}
+      run: kotlinc -script ./common.main.kts ${{ github.event.inputs.build }}
+      
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master  #https://github.com/marketplace/actions/sonarcloud-scan
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} 
