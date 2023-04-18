@@ -1,29 +1,17 @@
-name: Build
+name: Run Kotlin script
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
   workflow_dispatch:
+    inputs:
+      awesome-input:
+        description: 'Awesome parameter'
+        default: 'You'
+        required: true
 
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-        java: [ '11', '17' ]
+  awesome-action:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup JDK
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: ${{ matrix.java }}
-      - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
-      - name: Build
-        run: ./gradlew :server:build :shared:build -PjavaVersion=${{ matrix.java }}
-      - name: Detekt
-        run: ./gradlew detekt -PjavaVersion=${{ matrix.java }}
+    - uses: actions/checkout@v2
+    - name: Run Kotlin script
+      run: kotlinc -script ./common.main.kts ${{ github.event.inputs.awesome-input }}
