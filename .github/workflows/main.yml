@@ -8,5 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: fwilhe2/setup-kotlin@main
-      - run: kotlinc WalletApiApplication.kt -include-runtime -d /tmp/wallet.jar; java -jar /tmp/wallet.jar
+      - run: kotlinc src/main/kotlin/corporate/hard/robots/WalletAPI/WalletApiApplication.kt -include-runtime -d /tmp/wallet.jar; java -jar /tmp/wallet.jar
       - run: kotlin common.main.kts
